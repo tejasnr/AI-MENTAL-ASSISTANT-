@@ -1,0 +1,27 @@
+<!-- templates/chat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Include Socket.IO -->
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-window" id="chat-window">
+            <div class="message assistant">
+                <div class="message-content">
+                    Hi there, I'm here to support you. How are you feeling today?
+                </div>
+            </div>
+        </div>
+        <form id="chat-form">
+            <input type="text" id="message-input" autocomplete="off" placeholder="Type your message here..." required />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
